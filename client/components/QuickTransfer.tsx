@@ -9,7 +9,7 @@ const contacts = [
 
 export default function QuickTransfer() {
   return (
-    <div className="bg-primary-white rounded-[46px] p-8 h-[399px] w-[520px] flex flex-col justify-between">
+    <div className="bg-primary-white rounded-[46px] p-8 h-[399px] w-full flex flex-col justify-between">
       {/* Header */}
       <div className="flex justify-between items-center">
         <h3 className="text-primary-black text-[30px] font-medium">

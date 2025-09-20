@@ -1,97 +1,55 @@
-import { ChevronDown, TrendingUp } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 
 export default function IncomeCard() {
   return (
-    <div className="bg-primary-white rounded-[46px] p-8 h-[352px] w-[615px] flex flex-col justify-between">
-      <div className="flex flex-col space-y-2">
-        {/* Header */}
-        <div className="flex justify-between items-start">
-          <h3 className="text-primary-black text-[30px] font-medium">Income</h3>
-          <div className="bg-success-10 rounded-[32px] px-4 py-1.5 flex items-center space-x-1">
-            <span className="text-primary-black text-base">Month</span>
-            <ChevronDown size={16} className="text-primary-black" />
+    <div className="bg-primary-white rounded-[46px] p-4 lg:p-6 xl:p-8 relative flex flex-col justify-between h-[200px] lg:h-[220px] xl:h-[240px] w-full min-w-[250px] lg:min-w-[280px] xl:min-w-[320px] border border-gray-100">
+      {/* Trending Up Icon */}
+      <div className="absolute top-8 lg:top-10 xl:top-12 right-8 lg:right-10 xl:right-12 w-12 lg:w-14 xl:w-16 h-12 lg:h-14 xl:h-16 bg-success-10 rounded-full flex items-center justify-center">
+        <TrendingUp size={20} className="text-primary-green lg:w-6 lg:h-6 xl:w-6 xl:h-6" />
+      </div>
+
+      <div className="flex flex-col space-y-4 lg:space-y-5 xl:space-y-6">
+        {/* Title and Amount */}
+        <div className="flex flex-col">
+          <h3 className="text-primary-black text-lg lg:text-xl xl:text-2xl font-medium mb-2">
+            Total Income
+          </h3>
+          <div className="flex items-end space-x-2 lg:space-x-3 xl:space-x-4">
+            <span className="text-primary-black text-3xl lg:text-4xl xl:text-5xl font-normal">
+              $15,420
+            </span>
+            <span className="text-primary-black text-base lg:text-lg xl:text-xl font-normal mb-1 lg:mb-2 xl:mb-3">
+              USD
+            </span>
           </div>
         </div>
 
-        {/* Status Indicator */}
-        <div className="bg-success-10 rounded-[32px] px-3 py-1 flex items-center space-x-1 w-fit">
-          <div className="w-6 h-6 bg-primary-green rounded-full flex items-center justify-center">
-            <TrendingUp size={12} className="text-primary-black" />
+        {/* Percentage Change */}
+        <div className="flex items-center space-x-2">
+          <div className="bg-success-10 rounded-full px-3 lg:px-4 xl:px-5 py-1.5 lg:py-2 xl:py-2.5">
+            <span className="text-primary-green text-sm lg:text-base xl:text-lg font-medium">
+              +12.5%
+            </span>
           </div>
-          <span className="text-success-700 text-base">+14.4%</span>
+          <span className="text-gray-500 text-sm lg:text-base xl:text-lg">
+            from last month
+          </span>
         </div>
 
-        {/* Amount */}
-        <div className="absolute bottom-16 right-8">
-          <span className="text-primary-black text-xl">+ $1,060</span>
+        {/* Progress Bar */}
+        <div className="w-full">
+          <div className="w-full bg-gray-100 rounded-full h-2 lg:h-2.5 xl:h-3">
+            <div className="bg-primary-green h-2 lg:h-2.5 xl:h-3 rounded-full" style={{ width: "75%" }}></div>
+          </div>
+          <div className="flex justify-between mt-2 lg:mt-3 xl:mt-4">
+            <span className="text-gray-500 text-xs lg:text-sm xl:text-base">
+              Goal: $20,000
+            </span>
+            <span className="text-primary-black text-xs lg:text-sm xl:text-base font-medium">
+              75%
+            </span>
+          </div>
         </div>
-      </div>
-
-      {/* Chart Area */}
-      <div className="flex-1 relative mt-4">
-        {/* Simplified Chart Representation */}
-        <div className="h-[188px] flex items-end justify-between relative">
-          {/* Chart Lines */}
-          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 550 188">
-            {/* Background line */}
-            <path
-              d="M1 150 Q138 120, 275 140 Q412 160, 549 130"
-              stroke="black"
-              strokeWidth="2"
-              fill="none"
-              strokeLinecap="round"
-            />
-            {/* Main green line */}
-            <path
-              d="M1 100 Q138 80, 275 90 Q412 100, 549 70"
-              stroke="#00FF6B"
-              strokeWidth="2"
-              fill="none"
-              strokeLinecap="round"
-            />
-            {/* Fill area under green line */}
-            <path
-              d="M1 100 Q138 80, 275 90 Q412 100, 549 70 L549 188 L1 188 Z"
-              fill="url(#greenGradient)"
-            />
-            <defs>
-              <linearGradient
-                id="greenGradient"
-                x1="0%"
-                y1="0%"
-                x2="0%"
-                y2="100%"
-              >
-                <stop
-                  offset="0%"
-                  style={{ stopColor: "#CCFFCD", stopOpacity: 1 }}
-                />
-                <stop
-                  offset="100%"
-                  style={{ stopColor: "#CCFFCD", stopOpacity: 0 }}
-                />
-              </linearGradient>
-            </defs>
-            {/* Point indicator */}
-            <circle
-              cx="275"
-              cy="90"
-              r="8"
-              fill="black"
-              stroke="white"
-              strokeWidth="4"
-            />
-            <circle cx="275" cy="90" r="3" fill="#00FF6B" />
-          </svg>
-        </div>
-      </div>
-
-      {/* Month Labels */}
-      <div className="flex justify-between mt-4">
-        <span className="text-primary-grey text-xl">Jan</span>
-        <span className="text-primary-grey text-xl">Feb</span>
-        <span className="text-primary-grey text-xl">Mar</span>
-        <span className="text-primary-grey text-xl">Apr</span>
       </div>
     </div>
   );

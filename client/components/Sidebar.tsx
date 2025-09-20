@@ -23,9 +23,8 @@ export default function Sidebar() {
 
   return (
     <div
-      className={`fixed left-4 top-4 bottom-4 z-50 transition-all duration-300 ease-in-out ${
-        isHovered ? "w-64" : "w-20"
-      }`}
+      className={`fixed left-2 top-4 bottom-4 z-50 transition-all duration-300 ease-in-out ${isHovered ? "w-56 lg:w-64" : "w-16 lg:w-20"
+        }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -43,27 +42,24 @@ export default function Sidebar() {
           {navigationItems.map((item, index) => (
             <div
               key={index}
-              className={`relative flex items-center cursor-pointer group ${
-                item.active ? "text-primary-green" : "text-white"
-              }`}
+              className={`relative flex items-center cursor-pointer group ${item.active ? "text-primary-green" : "text-white"
+                }`}
             >
               <div
-                className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${
-                  item.active
+                className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${item.active
                     ? "bg-primary-green/10 text-primary-green"
                     : "hover:bg-white/10"
-                }`}
+                  }`}
               >
                 <item.icon size={24} />
               </div>
 
               {/* Label on hover */}
               <div
-                className={`ml-4 text-white font-medium transition-all duration-300 ${
-                  isHovered
+                className={`ml-4 text-white font-medium transition-all duration-300 ${isHovered
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 -translate-x-4 pointer-events-none"
-                }`}
+                  }`}
               >
                 {item.label}
               </div>
@@ -80,11 +76,10 @@ export default function Sidebar() {
 
             {/* Logout label on hover */}
             <div
-              className={`ml-4 text-white font-medium transition-all duration-300 ${
-                isHovered
+              className={`ml-4 text-white font-medium transition-all duration-300 ${isHovered
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 -translate-x-4 pointer-events-none"
-              }`}
+                }`}
             >
               Logout
             </div>

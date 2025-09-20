@@ -1,46 +1,27 @@
-import { Plus, Download, Send } from "lucide-react";
+import { Plus } from "lucide-react";
 
 export default function BalanceCard() {
   return (
-    <div className="bg-primary-green rounded-[46px] p-8 relative flex flex-col justify-between h-[352px] w-[615px]">
+    <div className="bg-primary-green rounded-[46px] p-4 lg:p-6 xl:p-8 relative flex flex-col justify-center h-[200px] lg:h-[220px] xl:h-[240px] w-full min-w-[250px] lg:min-w-[280px] xl:min-w-[320px]">
       {/* Plus Icon */}
-      <div className="absolute top-12 right-12 w-16 h-16 bg-primary-white rounded-full flex items-center justify-center">
-        <Plus size={24} className="text-primary-black" />
+      <div className="absolute top-6 lg:top-8 xl:top-10 right-6 lg:right-8 xl:right-10 w-10 lg:w-12 xl:w-14 h-10 lg:h-12 xl:h-14 bg-primary-white rounded-full flex items-center justify-center">
+        <Plus size={18} className="text-primary-black lg:w-5 lg:h-5 xl:w-6 xl:h-6" />
       </div>
 
-      <div className="flex flex-col space-y-6">
+      <div className="flex flex-col">
         {/* Title and Amount */}
         <div className="flex flex-col">
-          <h3 className="text-primary-black text-[30px] font-medium mb-2">
+          <h3 className="text-primary-black text-lg lg:text-xl xl:text-2xl font-medium mb-2">
             Total Balance
           </h3>
-          <div className="flex items-end space-x-4">
-            <span className="text-primary-black text-[72px] font-normal">
+          <div className="flex items-end space-x-2 lg:space-x-3 xl:space-x-4">
+            <span className="text-primary-black text-3xl lg:text-4xl xl:text-5xl font-normal">
               $20,670
             </span>
-            <span className="text-primary-black text-[30px] font-normal mb-4">
+            <span className="text-primary-black text-base lg:text-lg xl:text-xl font-normal mb-1 lg:mb-2 xl:mb-3">
               USD
             </span>
           </div>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="flex space-x-7">
-          <button className="flex-1 bg-primary-white rounded-[50px] py-5 px-8 flex items-center justify-center space-x-1">
-            <span className="text-primary-black text-2xl font-normal">
-              Deposit
-            </span>
-            <div className="w-8 h-8 bg-success-10 rounded-full flex items-center justify-center ml-1">
-              <Download size={16} className="text-primary-black" />
-            </div>
-          </button>
-
-          <button className="flex-1 bg-primary-black rounded-[50px] py-5 px-8 flex items-center justify-center space-x-1">
-            <span className="text-primary-white text-2xl font-normal">
-              Send
-            </span>
-            <Send size={16} className="text-primary-white ml-1" />
-          </button>
         </div>
       </div>
     </div>

@@ -37,7 +37,7 @@ const transactions = [
 
 export default function TransactionHistory() {
   return (
-    <div className="bg-primary-white rounded-[46px] p-8 h-[542px] w-[1262px] flex flex-col space-y-6">
+    <div className="bg-primary-white rounded-[46px] p-8 h-[542px] w-full flex flex-col space-y-6">
       {/* Header */}
       <div className="flex justify-between items-start">
         <h3 className="text-primary-black text-[30px] font-medium">

@@ -2,14 +2,14 @@ import { BarChart3 } from "lucide-react";
 
 export default function IncomeDonutCard() {
   return (
-    <div className="bg-primary-white rounded-[46px] p-8 h-[303px] w-[297px] flex flex-col justify-between">
+    <div className="bg-primary-white rounded-[46px] p-6 lg:p-8 h-[250px] lg:h-[280px] xl:h-[303px] w-full min-w-[250px] lg:min-w-[280px] xl:min-w-[297px] flex flex-col justify-between">
       {/* Header */}
       <div className="flex items-start space-x-4">
         <div className="flex flex-col space-y-4">
           <div className="w-16 h-16 bg-success-10 rounded-full flex items-center justify-center">
             <BarChart3 size={32} className="text-success-700" />
           </div>
-          <h3 className="text-primary-black text-[30px] font-medium">Income</h3>
+          <h3 className="text-primary-black text-xl lg:text-2xl xl:text-[30px] font-medium">Income</h3>
         </div>
 
         {/* Donut Chart */}
@@ -46,7 +46,7 @@ export default function IncomeDonutCard() {
       </div>
 
       {/* Amount */}
-      <div className="text-primary-black text-[60px] font-normal">$1,400</div>
+      <div className="text-primary-black text-3xl lg:text-4xl xl:text-[60px] font-normal">$1,400</div>
     </div>
   );
 }

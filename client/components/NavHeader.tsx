@@ -2,14 +2,14 @@ import { Search, Settings, Bell } from "lucide-react";
 
 export default function NavHeader() {
   return (
-    <div className="bg-primary-white rounded-[50px] p-4 flex items-center justify-between shadow-sm">
-      <h1 className="text-4xl font-normal text-primary-black">Overview</h1>
+    <div className="bg-primary-white rounded-[50px] p-3 lg:p-4 flex items-center justify-between shadow-sm">
+      <h1 className="text-2xl lg:text-3xl xl:text-4xl font-normal text-primary-black">Overview</h1>
 
-      <div className="flex items-center space-x-9">
+      <div className="flex items-center space-x-4 lg:space-x-6 xl:space-x-9">
         {/* Search */}
-        <div className="flex items-center space-x-2 bg-primary-bg rounded-[32px] px-4 py-4 w-[335px]">
-          <Search size={32} className="text-primary-black" />
-          <span className="text-primary-black text-base font-normal">
+        <div className="flex items-center space-x-2 bg-primary-bg rounded-[32px] px-3 lg:px-4 py-3 lg:py-4 w-48 lg:w-64 xl:w-[335px]">
+          <Search size={24} className="text-primary-black lg:w-8 lg:h-8" />
+          <span className="text-primary-black text-sm lg:text-base font-normal hidden sm:block">
             Search
           </span>
         </div>
@@ -30,19 +30,19 @@ export default function NavHeader() {
 
         {/* User Profile */}
         <div className="flex items-center space-x-2">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center">
-            <span className="text-white font-medium">WB</span>
+          <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center">
+            <span className="text-white font-medium text-sm lg:text-base">WB</span>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col hidden lg:flex">
             <div className="flex items-center space-x-2">
-              <span className="text-primary-grey text-sm">@williamB1111</span>
-              <div className="bg-primary-green px-2.5 py-0.5 rounded-[32px]">
-                <span className="text-primary-black text-base font-normal">
+              <span className="text-primary-grey text-xs lg:text-sm">@williamB1111</span>
+              <div className="bg-primary-green px-2 py-0.5 lg:px-2.5 lg:py-0.5 rounded-[32px]">
+                <span className="text-primary-black text-sm lg:text-base font-normal">
                   Pro
                 </span>
               </div>
             </div>
-            <span className="text-primary-black text-2xl font-normal">
+            <span className="text-primary-black text-lg lg:text-2xl font-normal">
               William Blake
             </span>
           </div>

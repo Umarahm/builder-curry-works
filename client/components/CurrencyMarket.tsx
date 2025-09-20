@@ -21,7 +21,7 @@ const currencies = [
 
 export default function CurrencyMarket() {
   return (
-    <div className="bg-primary-white rounded-[46px] p-8 h-[303px] w-[466px] flex flex-col space-y-8">
+    <div className="bg-primary-white rounded-[46px] p-8 h-[303px] w-full flex flex-col space-y-8">
       <h3 className="text-primary-black text-[30px] font-medium">
         Currencies Market
       </h3>
