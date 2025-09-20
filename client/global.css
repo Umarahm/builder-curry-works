@@ -1,5 +1,5 @@
 /** @import must precede all other statements */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +12,25 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
+    /* Design system colors */
+    --primary-bg: 225 11% 96%;
+    --primary-green: 142 100% 50%;
+    --primary-black: 0 0% 0%;
+    --primary-white: 0 0% 100%;
+    --primary-grey: 0 0% 71%;
+
+    --success-10: 122 100% 90%;
+    --success-700: 158 100% 36%;
+    --success-900: 158 100% 25%;
+
+    --info-10: 226 97% 94%;
+    --info-500: 228 89% 63%;
+
+    --danger-10: 24 100% 93%;
+    --danger-500: 6 100% 67%;
+
+    --warning-10: 60 97% 90%;
+    --warning-600: 45 94% 43%;
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -60,6 +79,25 @@
   }
 
   .dark {
+    /* Design system colors for dark mode */
+    --primary-bg: 225 11% 10%;
+    --primary-green: 142 100% 50%;
+    --primary-black: 0 0% 100%;
+    --primary-white: 0 0% 0%;
+    --primary-grey: 0 0% 45%;
+
+    --success-10: 122 50% 20%;
+    --success-700: 158 100% 36%;
+    --success-900: 158 100% 25%;
+
+    --info-10: 226 50% 20%;
+    --info-500: 228 89% 63%;
+
+    --danger-10: 24 50% 20%;
+    --danger-500: 6 100% 67%;
+
+    --warning-10: 60 50% 20%;
+    --warning-600: 45 94% 43%;
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
