@@ -13,7 +13,33 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+      },
       colors: {
+        // Design system colors
+        "primary-bg": "hsl(var(--primary-bg))",
+        "primary-green": "hsl(var(--primary-green))",
+        "primary-black": "hsl(var(--primary-black))",
+        "primary-white": "hsl(var(--primary-white))",
+        "primary-grey": "hsl(var(--primary-grey))",
+        success: {
+          10: "hsl(var(--success-10))",
+          700: "hsl(var(--success-700))",
+          900: "hsl(var(--success-900))",
+        },
+        info: {
+          10: "hsl(var(--info-10))",
+          500: "hsl(var(--info-500))",
+        },
+        danger: {
+          10: "hsl(var(--danger-10))",
+          500: "hsl(var(--danger-500))",
+        },
+        warning: {
+          10: "hsl(var(--warning-10))",
+          600: "hsl(var(--warning-600))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
