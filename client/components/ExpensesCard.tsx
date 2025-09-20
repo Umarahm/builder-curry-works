@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 export default function ExpensesCard() {
   const barHeights = [238, 142, 64, 206, 108]; // Heights for the bars
   const barColors = ["#00FF6B", "#00FF6B", "#000", "#00FF6B", "#00FF6B"]; // Colors for bars
-  
+
   return (
     <div className="bg-primary-white rounded-[46px] p-8 h-[446px] w-[520px] flex flex-col">
       {/* Header */}
@@ -14,17 +14,17 @@ export default function ExpensesCard() {
           <ChevronDown size={16} className="text-primary-black" />
         </div>
       </div>
-      
+
       {/* Chart */}
       <div className="flex-1 flex items-end justify-center space-x-6 relative">
         {/* Bars */}
         {barHeights.map((height, index) => (
           <div key={index} className="relative flex flex-col items-center">
-            <div 
+            <div
               className={`w-8 rounded-t-[17px]`}
-              style={{ 
-                height: `${height}px`, 
-                backgroundColor: barColors[index] 
+              style={{
+                height: `${height}px`,
+                backgroundColor: barColors[index],
               }}
             />
             {/* Highlight annotation for the middle (black) bar */}

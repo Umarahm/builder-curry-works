@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { 
-  LayoutDashboard, 
-  Wallet, 
-  MessageSquare, 
-  Mail, 
-  BarChart3, 
-  CreditCard, 
-  LogOut 
+import {
+  LayoutDashboard,
+  Wallet,
+  MessageSquare,
+  Mail,
+  BarChart3,
+  CreditCard,
+  LogOut,
 } from "lucide-react";
 
 const navigationItems = [
@@ -49,19 +49,19 @@ export default function Sidebar() {
             >
               <div
                 className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${
-                  item.active 
-                    ? "bg-primary-green/10 text-primary-green" 
+                  item.active
+                    ? "bg-primary-green/10 text-primary-green"
                     : "hover:bg-white/10"
                 }`}
               >
                 <item.icon size={24} />
               </div>
-              
+
               {/* Label on hover */}
               <div
                 className={`ml-4 text-white font-medium transition-all duration-300 ${
-                  isHovered 
-                    ? "opacity-100 translate-x-0" 
+                  isHovered
+                    ? "opacity-100 translate-x-0"
                     : "opacity-0 -translate-x-4 pointer-events-none"
                 }`}
               >
@@ -77,12 +77,12 @@ export default function Sidebar() {
             <div className="w-12 h-12 rounded-xl flex items-center justify-center hover:bg-white/10 transition-colors">
               <LogOut size={24} />
             </div>
-            
+
             {/* Logout label on hover */}
             <div
               className={`ml-4 text-white font-medium transition-all duration-300 ${
-                isHovered 
-                  ? "opacity-100 translate-x-0" 
+                isHovered
+                  ? "opacity-100 translate-x-0"
                   : "opacity-0 -translate-x-4 pointer-events-none"
               }`}
             >

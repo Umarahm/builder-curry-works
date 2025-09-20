@@ -19,14 +19,14 @@ export default function Index() {
           <IncomeCard />
           <YourCardsCard />
         </div>
-        
+
         {/* Middle Row - Income/Expense Donuts, Currency Market */}
         <div className="flex space-x-8">
           <IncomeDonutCard />
           <ExpenseDonutCard />
           <CurrencyMarket />
         </div>
-        
+
         {/* Right Column - Quick Transfer, Expenses */}
         <div className="flex justify-between">
           <div className="flex-1">

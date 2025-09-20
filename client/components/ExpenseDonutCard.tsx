@@ -11,10 +11,13 @@ export default function ExpenseDonutCard() {
           </div>
           <h3 className="text-primary-black text-[30px] font-medium">Income</h3>
         </div>
-        
+
         {/* Donut Chart */}
         <div className="relative w-[148px] h-[148px]">
-          <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+          <svg
+            className="w-full h-full transform -rotate-90"
+            viewBox="0 0 100 100"
+          >
             {/* Background circle */}
             <circle
               cx="50"
@@ -43,7 +46,7 @@ export default function ExpenseDonutCard() {
           </div>
         </div>
       </div>
-      
+
       {/* Amount */}
       <div className="text-primary-black text-[60px] font-normal">$2,080</div>
     </div>

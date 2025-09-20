@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+        sans: ["Poppins", "ui-sans-serif", "system-ui"],
       },
       colors: {
         // Design system colors
